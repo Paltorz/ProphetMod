@@ -7,6 +7,10 @@
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! Block."
 	},
+	"Terminus": {
+		"NAME": "Terminus",
+		"DESCRIPTION": "Deal !D! damage to All enemies. Miracle - Gain [R][R]."
+	},
 	"Parry": {
 		"NAME": "Parry",
 		"DESCRIPTION": "Deal !D! damage. Gain Block equal to 1/3 of the damage dealt (affected by Dexterity).",

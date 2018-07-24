@@ -24,12 +24,16 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import juggermod.cards.*;
 import juggermod.characters.TheJuggernaut;
 import juggermod.patches.AbstractCardEnum;
+import juggermod.patches.MiracleCard;
 import juggermod.patches.TheJuggernautEnum;
 import juggermod.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.nio.charset.StandardCharsets;
+
+import static juggermod.characters.TheJuggernaut.drawTracker;
+import static juggermod.characters.TheJuggernaut.increaseDTracker;
 
 @SpireInitializer
 public class JuggerMod implements PostInitializeSubscriber,
@@ -136,6 +140,7 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String SLUGFEST = "cards/slugfest.png";
     public static final String HEAVIER_BODY = "cards/heavier_body.png";
     public static final String PARRY = "cards/struggle.png";
+    public static final String TERMINUS = "cards/struggle.png";
 
     // power images
 
@@ -369,6 +374,7 @@ public class JuggerMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
 
+        BaseMod.addCard(new Terminus());
         BaseMod.addCard(new Parry());
         BaseMod.addCard(new HeavierBody());
         BaseMod.addCard(new Slugfest());
@@ -661,6 +667,12 @@ public class JuggerMod implements PostInitializeSubscriber,
 
 	@Override
 	public void receivePostDraw(AbstractCard c) {
+        if (drawTracker() == 0){
+            if (c instanceof MiracleCard){
+                ((MiracleCard) c).miracleActive = true;
+            }
+        }
+        increaseDTracker();
 	}
 
     @Override

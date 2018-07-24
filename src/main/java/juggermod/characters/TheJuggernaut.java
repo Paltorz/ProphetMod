@@ -19,6 +19,16 @@ public class TheJuggernaut extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 2;
 
 	public static int turnTracker = 0;
+	public static int drawTracker = 0;
+	public static void increaseDTracker(){
+		drawTracker++;
+	}
+	public static void resetDTracker(){
+		drawTracker = 0;
+	}
+	public static int drawTracker(){
+		return drawTracker;
+	}
 	public static final float[] orbRotations = {
 			0.0F,
 			0.0F,
@@ -61,6 +71,14 @@ public class TheJuggernaut extends CustomPlayer {
 			p.atEndOfTurn(true);
 		}
 		turnTracker++;
+	}
+
+	@Override
+	public void applyStartOfTurnPowers() {
+		for (AbstractPower p : this.powers) {
+			p.atStartOfTurn();
+		}
+		resetDTracker();
 	}
 
 	@Override
