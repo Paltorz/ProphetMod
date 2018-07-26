@@ -141,6 +141,10 @@ public class JuggerMod implements PostInitializeSubscriber,
     public static final String HEAVIER_BODY = "cards/heavier_body.png";
     public static final String PARRY = "cards/struggle.png";
     public static final String TERMINUS = "cards/struggle.png";
+    public static final String HARVEST = "cards/struggle.png";
+    public static final String STRENGTHENED_FAITH = "cards/struggle.png";
+    public static final String PRAYER = "cards/struggle.png";
+    public static final String FUTURE_SIGHT = "cards/struggle.png";
 
     // power images
 
@@ -374,6 +378,10 @@ public class JuggerMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Strike_Purple());
 		BaseMod.addCard(new Defend_Purple());
 
+        BaseMod.addCard(new FutureSight());
+        BaseMod.addCard(new Prayer());
+        BaseMod.addCard(new StrengthenedFaith());
+        BaseMod.addCard(new Harvest());
         BaseMod.addCard(new Terminus());
         BaseMod.addCard(new Parry());
         BaseMod.addCard(new HeavierBody());

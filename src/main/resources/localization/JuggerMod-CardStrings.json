@@ -7,6 +7,23 @@
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! Block."
 	},
+	"Future Sight": {
+		"NAME": "Future Sight",
+		"DESCRIPTION": "Clairvoyance Draw !M! cards."
+	},
+	"Prayer": {
+		"NAME": "Prayer",
+		"DESCRIPTION": "Reset your Miracle count for the turn. Draw a card. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Reset your Miracle count for the turn. Draw a card."
+	},
+	"Strengthened Faith": {
+		"NAME": "Strengthened Faith",
+		"DESCRIPTION": "Whenever you play a card with its Miracle active, gain 1 Strength."
+	},
+	"Harvest": {
+		"NAME": "Harvest",
+		"DESCRIPTION": "Draw 1 card. Miracle - Draw !M! cards instead."
+	},
 	"Terminus": {
 		"NAME": "Terminus",
 		"DESCRIPTION": "Deal !D! damage to All enemies. Miracle - Gain [R][R]."
